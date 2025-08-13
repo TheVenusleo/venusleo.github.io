@@ -23,28 +23,43 @@
       </header>
 
       <div id="main">
-       <article id="post">
-  <p>
-    <a id="pdfDl"   class="button primary" download>下载 PDF</a>
-    <a id="pdfOpen" class="button" target="_blank" rel="noopener">在新标签打开</a>
-  </p>
+      <article id="post">
+  <h2 class="major">在线阅读 + 下载</h2>
 
+  <p id="pdf-links" style="margin-bottom:1rem;"></p>
+
+  <!-- 内嵌阅读区域 -->
   <object id="pdfObject" type="application/pdf"
           style="width:100%;min-height:85vh;border:none;">
-    无法内嵌预览时，请点击“在新标签打开”查看 PDF。
+    无法内嵌预览时，请使用上方“在新标签打开”或“下载 PDF”按钮。
   </object>
 
   <script>
-    // 这里写“原样”的相对路径，不需要你手动转码
-    var pdfPath = '../../files/2025/“华数杯”比赛/数模论文（LaTeX）.pdf';
-    // 自动编码后再用
-    var url = encodeURI(pdfPath);
+    // 1) 这里写“原样”的相对路径（不需要你手动转码）
+    //    注意：从 blog/posts/ 出发回到站点根是 ../../
+    const pdfRelPath = '../../files/2025/“华数杯”比赛/数模论文（LaTeX）.pdf';
 
-    document.getElementById('pdfObject').data = url;
-    document.getElementById('pdfOpen').href = url;
-    document.getElementById('pdfDl').href   = url;
+    // 2) 把路径按“路径段”进行编码（避免把 / 编成 %2F）
+    function encodePath(path) {
+      return path.split('/').map(encodeURIComponent).join('/');
+    }
+
+    // 3) 计算**绝对 URL**（浏览器会补全域名、目录）
+    const encoded = encodePath(pdfRelPath);
+    const absUrl  = new URL(encoded, window.location.href).href;
+
+    // 4) 赋值到 object + 两个按钮
+    const obj   = document.getElementById('pdfObject');
+    const links = document.getElementById('pdf-links');
+    obj.data = absUrl;
+
+    links.innerHTML =
+      '<a class="button primary" href="' + absUrl + '" download>下载 PDF</a> ' +
+      '<a class="button" href="' + absUrl + '" target="_blank" rel="noopener">在新标签打开</a>' +
+      '<p style="opacity:.6;margin-top:.5rem;">当前加载地址：<code>' + absUrl + '</code></p>';
   </script>
 </article>
+
 
       </div>
 
