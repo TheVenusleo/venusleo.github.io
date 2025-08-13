@@ -1,15 +1,7 @@
-[
-  {
-    "title": "我的第一篇博文",
-    "date": "2025-08-13",
-    "summary": "开场白：5G 资源分配 / 数学建模 / Python 的点滴记录。",
-    "href": "posts/first-post.html",
-    "tags": ["5G", "建模", "Python"],
-    "cover": "../images/pic03.jpg",
-    "attachments": [
-      { "name": "论文PDF", "path": "../files/2025/hello-world/paper.pdf" },
-      { "name": "数据集CSV", "path": "../files/2025/hello-world/data.csv" },
-      { "name": "代码ZIP", "path": "../files/2025/hello-world/code.zip" }
-    ]
-  }
-]
+{
+  "title": "测试：纯文字版",
+  "date": "2025-08-13",
+  "summary": "一篇不含附件与图片的纯文字测试文章。",
+  "href": "posts/2025-08-13-test.html",
+  "tags": ["测试", "文字"]
+}
