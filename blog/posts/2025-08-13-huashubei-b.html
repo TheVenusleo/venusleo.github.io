@@ -10,6 +10,7 @@
   </head>
   <body class="is-preload">
     <div id="wrapper">
+      <!-- Header -->
       <header id="header">
         <div class="logo"><span class="icon solid fa-pen"></span></div>
         <div class="content"><div class="inner">
@@ -22,6 +23,7 @@
         </ul></nav>
       </header>
 
+      <!-- Main -->
       <div id="main">
         <article id="post">
           <p>
@@ -29,9 +31,13 @@
             <a class="button" href="../../files/2025/huashubei-b/huashubei-b-latex.pdf" target="_blank" rel="noopener">在新标签打开</a>
           </p>
 
-          <!-- 内嵌阅读器 -->
-          <object data="../../files/2025/huashubei-b/huashubei-b-latex.pdf#toolbar=1&view=FitH"
-                  type="application/pdf" style="width:100%;min-height:85vh;border:none;">
+          <!-- 内嵌 PDF（带三重回退） -->
+          <object
+            data="../../files/2025/huashubei-b/huashubei-b-latex.pdf#toolbar=1&view=FitH"
+            type="application/pdf"
+            style="width:100%;min-height:85vh;border:none;">
+            <embed src="../../files/2025/huashubei-b/huashubei-b-latex.pdf" type="application/pdf"
+                   style="width:100%;min-height:85vh;border:none;" />
             无法内嵌预览时，请点击上面的“在新标签打开”查看 PDF。
           </object>
         </article>
@@ -43,6 +49,11 @@
     </div>
 
     <div id="bg"></div>
+
+    <!-- 主题脚本之前，把哈希切到 #post，让正文自动展开 -->
+    <script>
+      if (!location.hash || location.hash === '#') { location.hash = '#post'; }
+    </script>
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/browser.min.js"></script>
     <script src="../../assets/js/breakpoints.min.js"></script>
