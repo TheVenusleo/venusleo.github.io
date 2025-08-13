@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="logo"><span class="icon solid fa-pen"></span></div>
+        <div class="content">
+          <div class="inner">
+            <h1>BLOG</h1>
+            <p>写点东西，慢慢积累。</p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#posts">Posts</a></li>
+            <li><a href="../index.html">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+        <article id="posts">
+          <h2 class="major">Posts</h2>
+          <!-- Filters -->
+          <section>
+            <input id="search" type="search" placeholder="搜索标题 / 摘要 / 标签" style="width:100%;padding:.8rem;border-radius:.5rem;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:inherit;">
+            <div id="tag-bar" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.5rem;"></div>
+          </section>
+          <!-- List -->
+          <section id="posts-list" class="posts"></section>
+        </article>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright">&copy; 你的名字. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+      </footer>
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script>
+      // 打开页面时自动进入 Posts 区域（兼容主题动画）
+      if (!location.hash || location.hash === '#') {
+        location.hash = '#posts';
+      }
+    </script>
+    <script src="../assets/js/main.js"></script>
+    <script src="blog.js"></script>
+  </body>
+</html>
