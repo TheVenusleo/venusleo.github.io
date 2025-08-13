@@ -1,0 +1,46 @@
+[
+  {
+    "title": "我的第一篇博文",
+    "date": "2025-08-13",
+    "summary": "开场白：5G 资源分配 / 数学建模 / Python 的点滴记录。",
+    "href": "posts/first-post.html",
+    "tags": [
+      "5G",
+      "建模",
+      "Python"
+    ],
+    "cover": "../images/pic03.jpg",
+    "attachments": [
+      {
+        "name": "论文PDF（示例）",
+        "path": "../files/2025/hello-world/paper.pdf"
+      },
+      {
+        "name": "数据集CSV（示例）",
+        "path": "../files/2025/hello-world/data.csv"
+      },
+      {
+        "name": "代码ZIP（示例）",
+        "path": "../files/2025/hello-world/code.zip"
+      }
+    ]
+  },
+  {
+    "title": "资源块分配：ILP vs MINLP",
+    "date": "2025-08-12",
+    "summary": "对比整数线性规划与非线性规划在切片资源分配中的优劣，并附实验数据。",
+    "href": "posts/ilp-vs-minlp.html",
+    "tags": [
+      "优化",
+      "ILP",
+      "MINLP"
+    ],
+    "cover": "../images/pic01.jpg",
+    "attachments": [
+      {
+        "name": "实验结果表（示例）",
+        "path": "../files/2025/ilp-minlp/results.xlsx"
+      }
+    ]
+  }
+]
