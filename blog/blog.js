@@ -66,7 +66,16 @@
     listEl.innerHTML = items.map(card).join('');
   }
   function card(p){
-    const cover = p.cover ? `<div style="margin:0 0 1rem 0"><img src="${esc(p.cover)}" alt=""></div>` : '';
+    const cover = p.cover ? `
+  <div class="cover" style="
+    width:100%;
+    aspect-ratio:16/9;       /* 或改为 height:220px; */
+    overflow:hidden;
+    border-radius:.75rem;
+    margin:0 0 .75rem 0;">
+    <img src="${escapeHtml(p.cover)}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+` : '';
     const tags = (p.tags||[]).map(t => `<code style="opacity:.8">${esc(t)}</code>`).join(' ');
     const attachments = (p.attachments && p.attachments.length)
       ? `<div style="margin-top:.5rem;"><strong>附件：</strong> ${
