@@ -1,5 +1,13 @@
 [
   {
+  "title": "Python 安装教程（避坑版）",
+  "date": "2025-08-14",
+  "summary": "Windows 上安装 Python 的保姆级步骤（避坑点：官方站下载、勾选 PATH、不点 path length limit）。",
+  "href": "posts/2025-08-14-python-install.html",
+  "tags": ["Python", "安装", "Windows", "避坑"],
+  "cover": "../images/blog/2025/python-install/cover.jpg"
+  }，
+  {
   "title": "2025 年华数杯数模 B 题（PDF）",
   "date": "2025-08-13",
   "summary": "整合 PDF，支持在线阅读与下载。",
